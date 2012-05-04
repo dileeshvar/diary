@@ -1,0 +1,12 @@
+{% if tasks_list %}
+    <table border="5">
+    {% for task in tasks_list %}
+        <tr>
+			<td>{{task.task_date}}</td>
+			<td>: {{ task.to_do_task }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% else %}
+    <p>No Notes are available.</p>
+{% endif %}

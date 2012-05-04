@@ -109,7 +109,7 @@ ROOT_URLCONF = 'diary.urls'
 WSGI_APPLICATION = 'diary.wsgi.application'
 
 TEMPLATE_DIRS = (
-    "/var/www/diary/templates",
+#    "/var/www/diary/templates",
     os.path.join(PROJECT_ROOT, "templates"),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.

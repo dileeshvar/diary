@@ -8,7 +8,7 @@ def home(request):
 	if request.method == 'POST':
 		diary_task = Diary(to_do_task=request.POST['task'], task_date = timezone.now())
 		diary_task.save()
-		return render_to_response('personal_diary/home.html',{'qualified_uri' : request.get_host()},context_instance=RequestContext(request))
+		return render_to_response('personal_diary/home.html',{'qualified_uri' : request.get_host(), 'message' : 'Task Added Successfully'},context_instance=RequestContext(request))
 	else :
 		return render_to_response('personal_diary/home.html',{'qualified_uri' : request.get_host()},context_instance=RequestContext(request))
 
